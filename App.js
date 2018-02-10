@@ -33,4 +33,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  buttonContainer: {
+    flex: 4,
+    width: 400,
+    backgroundColor: '#003366',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
 });

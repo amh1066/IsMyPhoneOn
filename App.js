@@ -1,16 +1,27 @@
 import React from 'react';
-import { StyleSheet, Text, View, Button, Image } from 'react-native';
+import { StyleSheet, Text, View, Button, Image, Alert } from 'react-native';
 
 export default class App extends React.Component {
+  _onPressButton() {
+    Alert.alert('Your Phone is On.')
+  }
   render() {
     let pic = {
       uri: 'https://upload.wikimedia.org/wikipedia/commons/d/de/Bananavarieties.jpg'
     };
     return (
-      <Image source={pic} style={{width: 193, height: 110}}/>
+      
       <View style={styles.container}>
+        <Image source={pic} style={{width: 193, height: 110}}/>
         <Text>Yes.</Text>
+        <View style={styles.buttonContainer}>
+          <Button
+            onPress={() => this._onPressButton()}
+            title="Continue"
+          />
+        </View>
       </View>
+      
     );
   }
 }
